@@ -1,9 +1,17 @@
 import React from 'react';
-import '/assets/scss/style.scss';
+import 'assets/scss/style.scss';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import LandingPage from 'pages/LandingPage';
+
 function App() {
   return (
     <div className="App">
-      Woiii Dunia!!!!!!!!!!
+       <Router>
+          {/* <Route path="/" component={LandingPage}> </Route> */}
+          <Switch>
+            <Route exact path="/" component={LandingPage} />
+          </Switch>
+        </Router>
     </div>
   );
 }
